@@ -1,4 +1,4 @@
-export const bookList = [
+export const booksList = [
   {
     title: "Harry Potter e a Pedra Filosofal",
     author: "J.K. Rowling",
