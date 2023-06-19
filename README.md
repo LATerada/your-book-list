@@ -20,7 +20,7 @@ To add a book, simply fill in the required fields, and if you'd like, you can al
 </div>
 
 ## 💿 Demonstration
-![Demonstration Link](https://your-book-list-LATerada.surge.sh)
+![Demonstration Link](https://your-book-list-laterada.surge.sh/)
 
 ## 📝 How to Install and Run the Project
 ```bash
