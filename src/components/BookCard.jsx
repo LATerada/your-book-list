@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { BookDetailModal } from "./BookDetailModal";
 import { useState } from "react";
 
@@ -9,17 +7,20 @@ export const BookCard = (props) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="flex border border-1 border-black p-2">
-      <div onClick={() => setOpenModal(true)}>
-        <img src={item.image} className="w-12 h-18"></img>
+    <div className="flex flex-col w-48 border border-1 p-2 bg-gray-50 shadow-sm">
+      <div onClick={() => setOpenModal(true)} className="flex flex-col">
+        <img src={item.image} className="w-44 drop-shadow-lg"></img>
         <div>
           <p>{item.title}</p>
           <p>{item.author}</p>
         </div>
       </div>
 
-      <button onClick={() => deleteBook(item)}>
-        <FontAwesomeIcon icon={faCircleXmark} />
+      <button
+        onClick={() => deleteBook(item)}
+        className="mt-3 m-auto inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
+      >
+        Excluir
       </button>
       <BookDetailModal
         bookInfo={item}
