@@ -15,7 +15,11 @@ export const BookDetailModal = (props) => {
                 <div className="sm:flex sm:items-start">
                   <img
                     src={bookInfo.image}
-                    className="mx-auto flex h-64 items-center justify-center rounded-sm"
+                    className={
+                      bookInfo.image === ""
+                        ? "hidden"
+                        : "mx-auto flex h-64 items-center justify-center rounded-sm"
+                    }
                   ></img>
                   <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                     <div
