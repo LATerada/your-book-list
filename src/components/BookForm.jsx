@@ -82,7 +82,7 @@ export const BookForm = (props) => {
       <button
         type="submit"
         onClick={onSubmit}
-        className="bg-gradient-to-r from-rose-400 to-orange-400 mt-3 m-auto inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm text-white font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
+        className="bg-gradient-to-r from-rose-400 to-orange-400 mt-3 m-auto inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm text-white font-semibold shadow-sm ring-1 ring-inset ring-gray-300"
       >
         Adicionar
       </button>
