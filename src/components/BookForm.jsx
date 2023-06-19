@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "../hooks/useForm";
 import ValidationService from "../services/validationService";
+import { Input } from "./Input";
 
 export const BookForm = (props) => {
   const { list, setList } = props;
@@ -29,7 +30,6 @@ export const BookForm = (props) => {
     setIsDescriptionValid(
       ValidationService.descriptionValidation(form.description)
     );
-    setIsUrlValid(ValidationService.urlValidation(form.image));
 
     if (
       ValidationService.titleValidation(form.title) &&
@@ -43,34 +43,40 @@ export const BookForm = (props) => {
 
   return (
     <div>
+      <p>Adicione um livro à lista!</p>
+      <p>(*)Obrigatório</p>
       <form onSubmit={onSubmit}>
-        <input
-          placeholder="Título"
+        <Input
+          placeholder="Título*"
           name="title"
           type="text"
           value={form.title}
           onChange={onChangeInputs}
+          isValid={isTitleValid}
         />
-        <input
-          placeholder="Autor"
+        <Input
+          placeholder="Autor*"
           name="author"
           type="text"
           value={form.author}
           onChange={onChangeInputs}
+          isValid={isAuthorValid}
         />
-        <input
-          placeholder="Descrição"
+        <Input
+          placeholder="Descrição*"
           name="description"
           type="text"
           value={form.description}
           onChange={onChangeInputs}
+          isValid={isDescriptionValid}
         />
-        <input
+        <Input
           placeholder="Link da Imagem (URL)"
           name="image"
           type="url"
           value={form.image}
           onChange={onChangeInputs}
+          isValid={isUrlValid}
         />
       </form>
       <button type="submit" onClick={onSubmit}>
