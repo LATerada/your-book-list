@@ -9,7 +9,14 @@ export const BookCard = (props) => {
   return (
     <div className="flex flex-col w-52 h-96 border border-1 p-3 bg-gray-50 shadow-md rounded-md">
       <div onClick={() => setOpenModal(true)} className="flex flex-col">
-        <img src={item.image} className="h-56 drop-shadow-lg"></img>
+        <img
+          src={
+            item.image === ""
+              ? "https://blog.atados.com.br/wp-content/uploads/2021/11/alfons-morales-YLSwjSy7stw-unsplash-scaled.jpg"
+              : item.image
+          }
+          className="h-56 drop-shadow-lg"
+        ></img>
         <div className=" h-20">
           <p className="mt-2 font-semibold">{item.title}</p>
           <p className=" italic">{item.author}</p>
