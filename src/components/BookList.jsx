@@ -1,15 +1,7 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { booksList } from "../constants/booksList";
 import { BookCard } from "../components/BookCard";
 
-export const BookList = () => {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    setList(booksList);
-    console.log(list);
-  }, [list]);
+export const BookList = (props) => {
+  const { list, setList } = props;
 
   return (
     <>
