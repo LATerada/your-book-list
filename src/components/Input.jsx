@@ -4,7 +4,7 @@ export const Input = (props) => {
   if (!isValid) {
     return (
       <input
-        className="w-80 h-14 py-4 pl-4 mb-1 border-red-500 border"
+        className="w-60 h-10 py-4 pl-4 mb-1 border-red-400 border-2"
         placeholder={placeholder}
         name={name}
         type={type}
@@ -15,7 +15,7 @@ export const Input = (props) => {
   }
   return (
     <input
-      className="w-80 h-14 py-4 pl-4 mb-2 border"
+      className="w-60 h-10 py-1 pl-4 mb-2 border"
       placeholder={placeholder}
       name={name}
       type={type}
