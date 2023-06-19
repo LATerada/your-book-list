@@ -19,8 +19,6 @@ To add a book, simply fill in the required fields, and if you'd like, you can al
 <img src="./public/bookAdded.png" width="600"  />
 </div>
 
-## 💿 Demonstration
-![Demonstration Link](https://your-book-list-laterada.surge.sh/)
 
 ## 📝 How to Install and Run the Project
 ```bash
