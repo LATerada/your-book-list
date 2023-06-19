@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { useForm } from "../hooks/useForm";
+import ValidationService from "../services/validationService";
 
 export const BookForm = (props) => {
   const { list, setList } = props;
+
+  const [isTitleValid, setIsTitleValid] = useState(true);
+  const [isAuthorValid, setIsAuthorValid] = useState(true);
+  const [isDescriptionValid, setIsDescriptionValid] = useState(true);
+  const [isUrlValid, setIsUrlValid] = useState(true);
 
   const { form, onChangeInputs, clearInputs } = useForm({
     title: "",
@@ -16,8 +23,22 @@ export const BookForm = (props) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    addBook(form);
-    clearInputs();
+
+    setIsTitleValid(ValidationService.titleValidation(form.title));
+    setIsAuthorValid(ValidationService.authorValidation(form.author));
+    setIsDescriptionValid(
+      ValidationService.descriptionValidation(form.description)
+    );
+    setIsUrlValid(ValidationService.urlValidation(form.image));
+
+    if (
+      ValidationService.titleValidation(form.title) &&
+      ValidationService.authorValidation(form.author) &&
+      ValidationService.descriptionValidation(form.description)
+    ) {
+      addBook(form);
+      clearInputs();
+    }
   };
 
   return (
