@@ -42,7 +42,7 @@ export const BookForm = (props) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-2/4 mt-6 mx-10 border border-1 p-3 bg-gray-50 shadow-md rounded-md">
+    <div className="flex flex-col items-center justify-center w-3/4 mt-6 mx-10 border border-1 p-3 bg-gray-50 shadow-md rounded-md md:w-2/4">
       <p className="font-bold m-2">Adicione um livro à lista!</p>
       <form onSubmit={onSubmit} className="flex flex-wrap items-center justify-center gap-2">
         <Input
