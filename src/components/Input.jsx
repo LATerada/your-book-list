@@ -20,7 +20,7 @@ export const Input = (props) => {
       name={name}
       type={type}
       value={value}
-      onChange={onChange}
+      onChange={onChange} 
     ></input>
   );
 };
