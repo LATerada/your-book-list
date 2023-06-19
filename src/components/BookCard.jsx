@@ -7,12 +7,12 @@ export const BookCard = (props) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="flex flex-col w-48 border border-1 p-2 bg-gray-50 shadow-sm">
+    <div className="flex flex-col w-52 h-96 border border-1 p-3 bg-gray-50 shadow-md rounded-md">
       <div onClick={() => setOpenModal(true)} className="flex flex-col">
-        <img src={item.image} className="w-44 drop-shadow-lg"></img>
-        <div>
-          <p>{item.title}</p>
-          <p>{item.author}</p>
+        <img src={item.image} className="h-56 drop-shadow-lg"></img>
+        <div className=" h-20">
+          <p className="mt-2 font-semibold">{item.title}</p>
+          <p className=" italic">{item.author}</p>
         </div>
       </div>
 

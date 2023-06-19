@@ -9,12 +9,12 @@ export const BookList = (props) => {
   };
   
   return (
-    <>
+    <div className="flex flex-wrap items-center justify-center p-6 gap-4">
       {list.map((item, index) => {
         return (
           <BookCard key={index} item={item} deleteBook={deleteBook}></BookCard>
         );
       })}
-    </>
+    </div>
   );
 };
