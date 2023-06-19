@@ -12,10 +12,10 @@ const HomePage = () => {
   }, [list]);
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center">
       <BookForm list={list} setList={setList} />
       <BookList list={list} setList={setList} />
-    </>
+    </div>
   );
 };
 export default HomePage;
