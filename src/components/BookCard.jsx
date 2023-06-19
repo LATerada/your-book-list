@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 
 export const BookCard = (props) => {
-  const { item } = props;
+  const { item, deleteBook } = props;
 
   return (
     <div className="flex border border-1 border-black p-2">
@@ -12,7 +12,7 @@ export const BookCard = (props) => {
         <p>{item.author}</p>
       </div>
 
-      <button>
+      <button onClick={() => deleteBook(item)}>
         <FontAwesomeIcon icon={faCircleXmark} />
       </button>
     </div>
